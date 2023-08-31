@@ -1,5 +1,5 @@
 {
-	"name": "kdyby/fake-session",
+	"name": "involve-digital/fake-session",
 	"type": "library",
 	"description": "FakeSession class for Nette Framework",
 	"keywords": ["nette", "kdyby", "session", "http"],
