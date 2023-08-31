@@ -245,4 +245,20 @@ class Session extends \Nette\Http\Session
 		return $this;
 	}
 
+    public function autoStart(bool $forWrite): void
+    {
+        if (!$this->fakeMode) {
+            $this->originalSession->autoStart($forWrite);
+        }
+    }
+
+    public function getSectionNames(): array
+    {
+        if (!$this->fakeMode) {
+            return $this->originalSession->getSectionNames();
+        }
+
+        return array_keys($this->sections);
+    }
+
 }
