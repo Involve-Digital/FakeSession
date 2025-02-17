@@ -46,7 +46,7 @@ class SessionSection extends \Nette\Http\SessionSection
 	 * @param string $name
 	 * @return mixed
 	 */
-	public function &__get(string $name)
+	public function &__get(string $name): mixed
 	{
 		if ($this->warnOnUndefined && !array_key_exists($name, $this->data)) {
 			trigger_error(sprintf("The variable '%s' does not exist in session section", $name), E_USER_NOTICE);
